@@ -3,7 +3,7 @@ module Rails
     CONFIG = YAML::load(ERB.new(IO.read(Rails.root + "/config/database.yml")).result)[Rails.env].with_indifferent_access
     
     def self.connect
-      Sequel.connect uri
+      Sequel.connect uri, :loggers => [Rails.logger]
     end
     
     def self.config
