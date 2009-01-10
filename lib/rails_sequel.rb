@@ -1,23 +1,8 @@
-module Rails
-  module SequelConnection
-    CONFIG = YAML::load(ERB.new(IO.read(Rails.root + "/config/database.yml")).result)[Rails.env].with_indifferent_access
-    
-    def self.connect
-      Sequel.connect uri, :loggers => [Rails.logger]
-    end
-    
-    def self.config
-      CONFIG
-    end
-    
-    def self.uri
-      uri = config[:adapter] << "://"
-      uri << config[:username] if config[:username]
-      uri << ':' << config[:password] if config[:password]
-      uri << '@' if config[:username] || config[:password]
-      uri << ':' << config[:port] if config[:port]
-      uri << config[:host]
-      uri << '/' << config[:database]
-    end
-  end
-end
+gem 'sequel'
+require 'sequel'
+
+require File.expand_path(File.dirname(__FILE__) + '/rails_sequel/rails_sequel')
+require File.expand_path(File.dirname(__FILE__) + '/rails_sequel/version')
+require File.expand_path(File.dirname(__FILE__) + '/rails_sequel/sequel_ext')
+
+Rails::SequelConnection.connect
