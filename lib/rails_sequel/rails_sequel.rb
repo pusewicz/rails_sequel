@@ -5,7 +5,7 @@ module Rails
     
     # Connects to database using constructed Database Connection URI
     def self.connect
-      Sequel.connect(self.options)
+      Sequel.connect(options)
     end
     
     # Returns loaded database.yml configuration for current environment
@@ -18,21 +18,21 @@ module Rails
       options = {}
 
       # Use SQLite by default
-      options[:adapter] = (CONFIG[:adapter] || "sqlite")
+      options[:adapter] = (config[:adapter] || "sqlite")
       # Use localhost as default host
-      options[:host] = (CONFIG[:host] || "localhost")
+      options[:host] = (config[:host] || "localhost")
       # Default user is an empty string. Both username and user keys are supported.
-      options[:user] = (CONFIG[:username] || config[:user] || "")
+      options[:user] = (config[:username] || config[:user] || "")
 
-      options[:password] = CONFIG[:password] || ""
+      options[:password] = config[:password] || ""
 
       # Both encoding and charset options are supported, default is utf8
-      options[:encoding] = (CONFIG[:encoding] || CONFIG[:charset] || "utf8")
+      options[:encoding] = (config[:encoding] || config[:charset] || "utf8")
       # Default database is hey_dude_configure_your_database
-      options[:database] = CONFIG[:database] || "hey_dude_configure_your_database"
+      options[:database] = config[:database] || "hey_dude_configure_your_database"
       # MSSQL support
-      options[:db_type] = CONFIG[:db_type] if CONFIG[:db_type]
-      options[:logger] = Rails.logger
+      options[:db_type] = config[:db_type] if config[:db_type]
+      options[:loggers] = Rails.logger
       options
     end
   end
