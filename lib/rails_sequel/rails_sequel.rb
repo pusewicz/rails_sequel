@@ -33,6 +33,8 @@ module Rails
       # MSSQL support
       options[:db_type] = config[:db_type] if config[:db_type]
       options[:socket] = config[:socket] if config[:socket]
+      options[:charset] = config[:charset] if config[:charset]
+      options[:encoding] = config[:encoding] if config[:encoding]
       options[:loggers] = [Rails.logger]
       options
     end
