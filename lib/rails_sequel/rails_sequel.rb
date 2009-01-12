@@ -5,7 +5,11 @@ module Rails
     
     # Connects to database using constructed Database Connection URI
     def self.connect
-      Sequel.connect(options)
+      options = self.prepare_options
+      connection = Sequel.connect(options)
+      if options[:adapter] == 'mysql'
+        connection.execute("SET SQL_AUTO_IS_NULL=0")
+      end
     end
     
     # Returns loaded database.yml configuration for current environment
@@ -14,7 +18,7 @@ module Rails
     end
     
     # Constructs Database Connection URI
-    def self.options
+    def self.prepare_options
       options = {}
 
       # Use SQLite by default
