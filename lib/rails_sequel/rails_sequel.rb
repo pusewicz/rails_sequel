@@ -32,7 +32,7 @@ module Rails
       options[:database] = config[:database] || "hey_dude_configure_your_database"
       # MSSQL support
       options[:db_type] = config[:db_type] if config[:db_type]
-      options[:loggers] = Rails.logger
+      options[:loggers] = [Rails.logger]
       options
     end
   end
