@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/lib/rails_sequel/version')
 
 Gem::Specification.new do |s|
   s.name    = 'rails_sequel'
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.date    = '2009-01-10'
   
   s.summary = "Sequel plugin for Ruby on Rails"
