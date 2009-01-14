@@ -2,6 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/lib/rails_sequel/version')
 
 Gem::Specification.new do |s|
   s.name    = 'rails_sequel'
+  # Change VERSION too
   s.version = "0.1.2"
   s.date    = '2009-01-14'
   

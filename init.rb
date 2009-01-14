@@ -1,1 +1,1 @@
-require File.expand_path(File.dirname(__FILE__) + '/lib/rails_sequel')
+require 'rails_sequel'
