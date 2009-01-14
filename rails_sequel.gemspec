@@ -2,8 +2,8 @@ require File.expand_path(File.dirname(__FILE__) + '/lib/rails_sequel/version')
 
 Gem::Specification.new do |s|
   s.name    = 'rails_sequel'
-  s.version = "0.0.2"
-  s.date    = '2009-01-10'
+  s.version = "0.1.0"
+  s.date    = '2009-01-14'
   
   s.summary = "Sequel plugin for Ruby on Rails"
   s.description = "rails_sequel allows you to quickly use Sequel Toolkit as your ORM in Ruby on Rails"
@@ -17,5 +17,6 @@ Gem::Specification.new do |s|
   # s.rdoc_options << '--inline-source' << '--charset=UTF-8'
   # s.extra_rdoc_files = ['README.rdoc', 'LICENSE', 'CHANGELOG.rdoc']
   
-  s.files = Dir['lib/**/*.rb'] + Dir['init.rb'] + Dir['README.md']
+  s.files = ["lib/rails_sequel/rails_sequel.rb", "lib/rails_sequel/sequel_ext.rb", "lib/rails_sequel/version.rb", "lib/rails_sequel.rb", "init.rb", "README.md"]
+  # Dir['lib/**/*.rb'] + Dir['init.rb'] + Dir['README.md']
 end
