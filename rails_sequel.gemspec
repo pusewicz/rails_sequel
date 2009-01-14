@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
   
   s.files = ["lib/rails_sequel/rails_sequel.rb", "lib/rails_sequel/sequel_ext.rb", "lib/rails_sequel/version.rb", "lib/rails_sequel.rb", "init.rb", "README.md"]
   # Dir['lib/**/*.rb'] + Dir['init.rb'] + Dir['README.md']
+  
+  s.add_dependency("sequel", [">= 2.8.0"])
 end
