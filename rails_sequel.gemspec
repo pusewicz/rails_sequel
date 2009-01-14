@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/lib/rails_sequel/version')
+require 'rails_sequel/version'
 
 Gem::Specification.new do |s|
   s.name    = 'rails_sequel'
