@@ -1,5 +1,5 @@
-# gem 'sequel'
-# require 'sequel'
+gem 'sequel'
+require 'sequel'
 
 require 'rails_sequel/rails_sequel'
 require 'rails_sequel/version'

@@ -1,5 +1,3 @@
-require 'rails_sequel/version'
-
 Gem::Specification.new do |s|
   s.name    = 'rails_sequel'
   # Change VERSION too
