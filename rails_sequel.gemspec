@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name    = 'rails_sequel'
   # Change VERSION too
-  s.version = "0.1.2"
-  s.date    = '2009-01-14'
+  s.version = "0.1.3"
+  s.date    = '2009-01-21'
   
   s.summary = "Sequel plugin for Ruby on Rails"
   s.description = "rails_sequel allows you to quickly use Sequel Toolkit as your ORM in Ruby on Rails"
