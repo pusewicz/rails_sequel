@@ -1,15 +1,10 @@
 module Rails
   module SequelConnection
-    module Version
-      MAJOR = 0
-      MINOR = 1
-      TINY  = 3
-
-      STRING = [MAJOR, MINOR, TINY].join('.')
-    end
+    config = YAML.load(File.read(File.join(File.dirname(__FILE__), '../../VERSION.yml')))
+    VERSION = "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
     
     def self.version
-      Version::STRING
+      VERSION
     end
   end
 end

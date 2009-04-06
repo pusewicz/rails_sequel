@@ -18,7 +18,7 @@ Installation
   Load the gem in `environment.rb`
   
     Rails::Initializer.run do |config|
-      config.gem 'pusewicz-rails_sequel', :version => '~> 0.0.2', :lib => 'rails_sequel', :source => 'http://gems.github.com'
+      config.gem 'pusewicz-rails_sequel', :version => '0.1.4', :lib => 'rails_sequel', :source => 'http://gems.github.com'
     end
     
 Optional
