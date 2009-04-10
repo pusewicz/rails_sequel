@@ -1,0 +1,21 @@
+test:
+  adapter: sqlite
+  database: db/test.sqlite3
+  
+mysql:
+  adapter: mysql
+  database: henry
+  hostname: john
+  username: piotr
+  password: usewicz
+  charset: brilliant
+  encoding: ascii
+  socket: /var/run/my.socket
+
+mssql:
+  db_type: sometype
+  
+test_mysql:
+  adapter: mysql
+  database: mysql
+  user: root
