@@ -44,6 +44,11 @@ module RailsSequel
       options[var]      = config[var] if config[var]
     end
     
+    # JDBC support
+    [:url, :uri].each do |var|
+      options[var]      = config[var] if config[var]
+    end
+    
     options[:loggers]   = [Rails.logger]
     options
   end
