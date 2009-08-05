@@ -16,15 +16,15 @@ class MockDataset < Sequel::Dataset
   def insert(*args)
     @db.execute insert_sql(*args)
   end
-  
+
   def update(*args)
     @db.execute update_sql(*args)
   end
-  
+
   def delete(*args)
     @db.execute delete_sql(*args)
   end
-  
+
   def fetch_rows(sql)
     return if sql =~ /information_schema/
     @db.execute(sql)
@@ -41,7 +41,7 @@ class MockDatabase < Sequel::Database
   self.identifier_input_method = nil
   self.identifier_output_method = nil
   attr_reader :sqls
-  
+
   def execute(sql, opts={})
     @sqls ||= []
     @sqls << sql
@@ -81,12 +81,10 @@ end
 
 class << Sequel::Model
   alias orig_columns columns
-  alias orig_str_columns str_columns
   def columns(*cols)
     return if cols.empty?
     define_method(:columns){cols}
     @dataset.instance_variable_set(:@columns, cols) if @dataset
-    define_method(:str_columns){cols.map{|x|x.to_s.freeze}}
     def_column_accessor(*cols)
     @columns = cols
     @db_schema = {}
@@ -101,11 +99,11 @@ module Rails
   def self.root
     File.dirname(__FILE__)
   end
-  
+
   def self.env
     'test'
   end
-  
+
   def self.logger
     Logger.new(STDOUT)
   end
