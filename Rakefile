@@ -10,6 +10,7 @@ begin
     gem.email = "piotr@layer22.com"
     gem.homepage = "http://github.com/pusewicz/rails_sequel"
     gem.authors = ["Piotr Usewicz"]
+    gem.rubyforge_project = "rails-sequel"
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
