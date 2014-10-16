@@ -1,4 +1,9 @@
 require 'rubygems'
+
+if RUBY_VERSION < "1.9"
+  require 'backports/basic_object'
+end
+
 require 'erb'
 require 'rr'
 require 'spec'

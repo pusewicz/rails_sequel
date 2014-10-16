@@ -28,6 +28,19 @@ Optional
 
     config.frameworks -= [ :active_record ]
 
+Development
+===========
+
+Install gems:
+
+    bundle install
+
+(Tested on Ruby 1.8.7-p375 with Bundler 1.7.3)
+
+Run specs:
+
+    bundle exec spec spec/*_spec.rb
+
 Community
 =========
 
