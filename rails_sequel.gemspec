@@ -14,28 +14,28 @@ Gem::Specification.new do |s|
   s.email = %q{piotr@layer22.com}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.md"
+    "README.md"
   ]
   s.files = [
     ".document",
-     ".gitignore",
-     "LICENSE",
-     "README.md",
-     "Rakefile",
-     "VERSION.yml",
-     "init.rb",
-     "lib/rails_sequel.rb",
-     "lib/rails_sequel/rails_sequel.rb",
-     "lib/rails_sequel/sequel_ext.rb",
-     "lib/rails_sequel/version.rb",
-     "rails_sequel.gemspec",
-     "spec/config/database.yml",
-     "spec/rails_sequel_spec.rb",
-     "spec/sequel_ext_spec.rb",
-     "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "spec/version_spec.rb",
-     "tasks/sequel.rake"
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "Rakefile",
+    "VERSION.yml",
+    "init.rb",
+    "lib/rails_sequel.rb",
+    "lib/rails_sequel/rails_sequel.rb",
+    "lib/rails_sequel/sequel_ext.rb",
+    "lib/rails_sequel/version.rb",
+    "rails_sequel.gemspec",
+    "spec/config/database.yml",
+    "spec/rails_sequel_spec.rb",
+    "spec/sequel_ext_spec.rb",
+    "spec/spec.opts",
+    "spec/spec_helper.rb",
+    "spec/version_spec.rb",
+    "tasks/sequel.rake"
   ]
   s.homepage = %q{http://github.com/pusewicz/rails_sequel}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -44,18 +44,13 @@ Gem::Specification.new do |s|
   s.summary = %q{Sequel plugin for Ruby on Rails}
   s.test_files = [
     "spec/rails_sequel_spec.rb",
-     "spec/sequel_ext_spec.rb",
-     "spec/spec_helper.rb",
-     "spec/version_spec.rb"
+    "spec/sequel_ext_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/version_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
-
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-    else
-    end
-  else
   end
 end
